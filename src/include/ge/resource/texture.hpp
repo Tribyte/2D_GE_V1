@@ -64,8 +64,6 @@ namespace ge {
                     temp = temp.substr(temp.find(' ') + 1, temp.size() - 1);
                     int y = std::stoi(temp);
 
-                    std::cout << "X: " << x << " Y: " << y << " W: " << w << " H: " << h << std::endl;
-
                     sf::IntRect selectionArea(x, y, w, h);
                     if(!tex[i].loadFromImage(img, selectionArea)){
                         std::cout << "error in loading '" << name << "' spritesheet";
