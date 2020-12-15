@@ -2,3 +2,4 @@
 *.exe
 .vscode
 main.cpp
+src/res
