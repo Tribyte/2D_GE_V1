@@ -55,14 +55,16 @@ namespace ge {
                     std::string temp = rect.at(i).substr(4, rect.at(i).size() - 1);
                     int w = std::stoi(temp.substr(0, temp.find(' ')));
 
-                    temp = temp.substr(temp.find(' ') + 2, temp.size() - 1);
+                    temp = temp.substr(temp.find(' ') + 1, temp.size() - 1);
                     int h = std::stoi(temp.substr(0, temp.find(' ')));
 
-                    temp = temp.substr(temp.find(' ') + 2, temp.size() - 1);
+                    temp = temp.substr(temp.find(' ') + 1, temp.size() - 1);
                     int x = std::stoi(temp.substr(0, temp.find(' ')));
 
-                    temp = temp.substr(temp.find(' ') + 2, temp.size() - 1);
+                    temp = temp.substr(temp.find(' ') + 1, temp.size() - 1);
                     int y = std::stoi(temp);
+
+                    std::cout << "X: " << x << " Y: " << y << " W: " << w << " H: " << h << std::endl;
 
                     sf::IntRect selectionArea(x, y, w, h);
                     if(!tex[i].loadFromImage(img, selectionArea)){
